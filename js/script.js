@@ -1,11 +1,26 @@
-let navButton = document.querySelector("#nav-icon");
+let scrollPos = window.scrollY;
 
-navButton.addEventListener('click', navBarReact);
+let navBar = document.getElementById('navBar');
+// selects the element by Id
 
-function navBarReact(){
-	console.log("my navbar works");
-	navButton.classList.toggle('open');
-};
+function addClassOnScroll(){
+	navBar.classList.add("scrolled");
+}
+
+function removeClassOnScroll(){
+	navBar.classList.remove("scrolled");
+}
 
 
+window.addEventListener('scroll', function(){
+	scrollPos = window.scrollY;
 
+	if(scrollPos > 60){
+		addClassOnScroll();
+	}
+	else{
+		removeClassOnScroll();
+	}
+	console.log(scrollpos);
+
+});
