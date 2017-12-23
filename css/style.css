@@ -1,7 +1,12 @@
+body, html{
+  height: 100%;
+}
+
 body{
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
 	background-color: #242424;
+    color: rgba(189, 189, 189, 1);
 }
 *{
   margin: 0;
@@ -9,6 +14,7 @@ body{
 }
 a{
 	font-family: 'Montserrat', sans-serif;
+
 }
 
 h2{
@@ -18,6 +24,8 @@ h2{
 
 #navBar{
   position: fixed;
+  width: 100vw;
+  z-index: 100;
 }
 
 #navBar.scrolled{
@@ -31,38 +39,212 @@ background: rgba(31,31,31,0.8);
   justify-content: center;
 }
 
-#parallax{
-  width: 100%;
+
+/*--------------------------------------------------------------
+Parallax
+--------------------------------------------------------------*/
+.keyart, .keyart_layer{
+  height: 600px;
 }
 
-button {
-  display: inline-block;
-  padding: 10px 25px;
-  font-size: 24px;
-  cursor: pointer;
+#parallax{
+  display: none;
+}
+#nonparallax{
+  display: block;
+}
+
+#nonparallax{
+  background-image: url(../pictures/parallax-phone.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.keyart{
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer{
+  background-position: bottom center;
+  background-size: auto 1038px;
+  width: 100%;
+  position: absolute;
+}
+
+.keyart_layer.parallax{
+  position: fixed;
+}
+
+  #keyart-0{
+    background-image: url('../pictures/parallax-himmel.png');
+
+  }
+  #keyart-1{
+    background-image: url('../pictures/parallax-1.png');
+
+  }
+  #keyart-2{
+    background-image: url('../pictures/parallax-2.png');
+  }
+  #keyart-3{
+    background-image: url('../pictures/parallax-3.png');
+  }
+  #keyart-4{
+    background-image: url('../pictures/parallax-4.png');
+
+  }
+  #keyart-5{
+    background-image: url('../pictures/parallax-vand.png');
+  }
+  #keyart-6{
+    background-image: url('../pictures/parallax-5.png');
+  }
+  #keyart-7{
+    background-image: url('../pictures/parallax-6.png');
+
+  }
+  #keyart-8{
+    background-image: url('../pictures/parallax-front.png');
+  }
+
+/*--------------------------------------------------------------
+Footer:
+--------------------------------------------------------------*/
+
+.colophon {
+  padding: 1em;
+  background: hsl(0, 0%, 10%);
+  text-align: center;
+  font-size: 14px;
+}
+
+.colophon a {
+  color: white;
+}
+
+
+/*--------------------------------------------------------------
+Social media buttons
+--------------------------------------------------------------*/
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 35px;
   text-align: center;
   text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #78933F;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 2px #999;
-  position: relative;
-  width:160px;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
 
-button:hover {background-color: #5B6F30}
-
-button:active {
-  background-color: #5B6F30;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.fa:hover {
+    opacity: 0.5;
+}
+.fa-facebook {
+  background: grey;
+  color: white;
 }
 
-.container{
-  position: fixed;
-  top:0;
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: grey;
+  color: white;
+}
+
+.fa-linkedin {
+  background: grey;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: grey;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
 }
 
 
@@ -179,7 +361,7 @@ Navigation Bar
 .outer-menu .checkbox-toggle {
   position: absolute;
   top: 3vh;
-  right: 27%;
+  right: 40px;
   z-index: 700;
   cursor: pointer;
   width: 60px;
@@ -222,7 +404,7 @@ Navigation Bar
 .outer-menu .hamburger {
   position: relative;
   top: 3vh;
-  right: 27%;
+  right: 40px;
   z-index: 600;
   width: 60px;
   height: 60px;
