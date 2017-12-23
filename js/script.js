@@ -25,3 +25,6 @@ window.addEventListener('scroll', function(){
 
 });
 
+function load(){
+	window.open("welcome.html", "_self");
+}
