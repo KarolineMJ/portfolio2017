@@ -115,9 +115,11 @@ Loader
 /*--------------------------------------------------------------
 Parallax
 --------------------------------------------------------------*/
-.keyart, .keyart_layer{
+.keyart2{
   height: 600px;
 }
+
+
 
 #parallax{
   display: none;
@@ -131,11 +133,6 @@ Parallax
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-}
-
-.keyart{
-  position: relative;
-  z-index: 10;
 }
 
 
@@ -651,13 +648,6 @@ body{
   justify-content: center;
 }
 
-.keyart_layer{
-  background-position: bottom center;
-  background-size: auto 1038px;
-  width: 100%;
-  position: absolute;
-}
-
 
 #parallax{
   display: block;
@@ -665,39 +655,55 @@ body{
 #nonparallax{
   display: none;
 }
+
+.keyart, .keyart_layer{
+  height: 1000px;
+}
+.keyart{
+  position: relative;
+  z-index: 10;
+}
+
+.keyart_layer{
+  background-position: bottom center;
+  background-size: auto 1038px;
+  width: 100%;
+  position: absolute;
+}
+
 .keyart_layer.parallax{
   position: fixed;
 }
 
   #keyart-0{
-    background-image: url('../pictures/parallax-himmel.png');
+    background-image: url('../pictures/parallax-himmel-1.png');
 
   }
   #keyart-1{
-    background-image: url('../pictures/parallax-1.png');
+    background-image: url('../pictures/parallax-1.2.png');
 
   }
   #keyart-2{
-    background-image: url('../pictures/parallax-2.png');
+    background-image: url('../pictures/parallax-2.1.png');
   }
   #keyart-3{
-    background-image: url('../pictures/parallax-3.png');
+    background-image: url('../pictures/parallax-3.1.png');
   }
   #keyart-4{
-    background-image: url('../pictures/parallax-4.png');
+    background-image: url('../pictures/parallax-4.1.png');
 
   }
   #keyart-5{
-    background-image: url('../pictures/parallax-vand.png');
+    background-image: url('../pictures/parallax-vand-1.png');
   }
   #keyart-6{
-    background-image: url('../pictures/parallax-5.png');
+    background-image: url('../pictures/parallax-5.1.png');
   }
   #keyart-7{
-    background-image: url('../pictures/parallax-6.png');
+    background-image: url('../pictures/parallax-6.1.png');
   }
   #keyart-8{
-    background-image: url('../pictures/parallax-front.png');
+    background-image: url('../pictures/parallax-front-1.png');
   }
 }
 
