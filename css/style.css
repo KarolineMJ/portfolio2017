@@ -182,6 +182,23 @@ For small screen
   float: left;
 }
 
+#codePic, #penguin, #UXPic, #videoPic{
+  width: 70vw;
+}
+#codePic:hover, #penguin:hover, #UXPic:hover, #videoPic:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.img-wrapper{
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 110px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
 #programs{
   width: 40vw;
 }
@@ -201,7 +218,7 @@ For small screen
 #navBar{
   position: fixed;
   width: 100vw;
-  z-index: 100;
+  z-index: 700;
 }
 
 #navBar.scrolled{
@@ -787,10 +804,30 @@ For big screen
   width: 35px;
 }
 
+#codePic, #penguin, #UXPic, #videoPic{
+  width: 40vw;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#codePic:hover, #penguin:hover, #UXPic:hover, #videoPic:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.img-wrapper{
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 110px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr;
-    padding:15px;
+  padding:15px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -808,7 +845,7 @@ For big screen
 #navBar{
   position: fixed;
   width: 100vw;
-  z-index: 100;
+  z-index: 700;
 }
 
 #navBar.scrolled{
