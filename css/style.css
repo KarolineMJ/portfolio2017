@@ -45,16 +45,24 @@ background: rgba(31,31,31,0.8);
   padding-top: 110px;
 
 }
+
 .wrapper{
   display: grid;
   grid-template-columns:1fr;
   padding:15px;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #portrait{
   border-radius: 50%;
   width: 300px;
+}
+#me{
+  text-align: center;
+}
+.aboutMe{
 }
 
 /*--------------------------------------------------------------
