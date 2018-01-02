@@ -856,7 +856,7 @@ Social media buttons
     .cards {
       max-width: none;
       display: grid;
-      grid-template-columns: repeat(2, 25em);
+      grid-template-columns: repeat(2, 38em);
       grid-gap: 1em;
       justify-content: center;
     }
