@@ -41,6 +41,55 @@ a:active{
   text-decoration: none;
 }
 
+.text-projects{
+  padding-top:100px;
+}
+
+
+/*--------------------------------------------------------------
+Cards:
+--------------------------------------------------------------*/
+
+.cards {
+  max-width: 40em;
+  padding-top: 100px;
+  list-style-type: none;
+
+}
+
+.cards a {
+  display: block;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+
+.caption {
+  padding: 1em;
+  font-size: 90%;
+  color: rgba(189, 189, 189, 1);
+}
+
+.caption-title {
+  margin: 0;
+  font-size: 1.4em;
+  line-height: 1em;
+}
+
+.caption p {
+  margin-top: .5em;
+  margin-bottom: 0;
+}
+
+.cards a:focus .caption,
+.cards a:hover .caption {
+  background: #3a3a3a;
+}
+
+.cards img{
+  width:100%;
+}
+
+
 /*--------------------------------------------------------------
 Input form
 --------------------------------------------------------------*/
@@ -162,7 +211,7 @@ fieldset {
 For small screen
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 530px){
+@media screen and (max-width: 650px){
 #logo{
   width: 35%;
   float: left;
@@ -774,11 +823,67 @@ Social media buttons
   color: white;
 }
 
+@supports (grid-area: auto) {
+
+  @media screen and (min-width: 27em) {
+
+
+    .cards {
+      margin: 0 auto;
+      padding: 1em;
+      padding-top: 100px;
+    }
+
+    .card {
+      margin: 1em 0;
+      padding: .5em;
+      display: grid;
+      grid-template-columns: 12em auto;
+    }
+
+    .cards a:focus,
+    .cards a:hover {
+      outline: 1px solid #3a3a3a;
+    }
+
+
+  }
+
+
+
+  @media screen and (min-width: 60em) {
+
+    .cards {
+      max-width: none;
+      display: grid;
+      grid-template-columns: repeat(2, 25em);
+      grid-gap: 1em;
+      justify-content: center;
+    }
+
+    .card {
+      margin: 0;
+    }
+
+    .double {
+      grid-row: span 3;
+    }
+
+    .double .card {
+      display: block;
+    }
+    .full-text{
+      grid-column: span 1;
+    }
+
+  }
+}
+
 /*--------------------------------------------------------------
 For big screen
 --------------------------------------------------------------*/
 
-@media screen and (min-width: 530px) {
+@media screen and (min-width: 650px) {
 #logo{
   width: 175px;
   float: left;
